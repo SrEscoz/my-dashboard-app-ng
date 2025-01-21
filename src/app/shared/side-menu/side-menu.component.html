@@ -1,29 +1,31 @@
-<div class="h-full relative">
-    <p-menu [model]="items" styleClass="h-full w-17rem">
+<div class="fixed top-0 left-0 h-screen">
+    <div class="h-full relative">
+        <p-menu [model]="items" styleClass="h-full w-17rem">
 
-        <ng-template pTemplate="start">
-            <div class="text-center h-16">
-                <h3>DASHBOARD <span class="text-primary">ROÑOSO</span></h3>
-            </div>
-            <p-divider/>
-        </ng-template>
-
-        <ng-template pTemplate="end">
-            <div class="absolute bottom-0 left-0 w-full">
+            <ng-template pTemplate="start">
+                <div class="text-center h-16">
+                    <h3>DASHBOARD <span class="text-primary">ROÑOSO</span></h3>
+                </div>
                 <p-divider/>
-                <button pRipple
-                        class="relative overflow-hidden w-full p-link flex align-items-center p-3 pl-3 text-color hover:surface-200 border-noround">
-                    <p-avatar label="SS"
-                              class="mr-3"
-                              shape="square"
-                              [style]="{ 'background-color': '#f5a00a', color: '#ffffff' }"/>
-                    <span class="inline-flex flex-column">
+            </ng-template>
+
+            <ng-template pTemplate="end">
+                <div class="absolute bottom-0 left-0 w-full">
+                    <p-divider/>
+                    <button pRipple
+                            class="relative overflow-hidden w-full p-link flex align-items-center p-3 pl-3 text-color hover:surface-200 border-noround">
+                        <p-avatar label="SS"
+                                  class="mr-3"
+                                  shape="square"
+                                  [style]="{ 'background-color': '#f5a00a', color: '#ffffff' }"/>
+                        <span class="inline-flex flex-column">
                         <span class="font-bold">Señor Scuz</span>
                         <span class="text-sm">Admin</span>
                     </span>
-                </button>
-            </div>
-        </ng-template>
+                    </button>
+                </div>
+            </ng-template>
 
-    </p-menu>
+        </p-menu>
+    </div>
 </div>
