@@ -1,1 +1,102 @@
-<p>control-flow works!</p>
+<h3>Control de flujos</h3>
+<p-divider/>
+
+<div class="grid">
+
+    <div class="col-4">
+        <p-card>
+            <h3>if: <span class="text-primary-300">{{ showContent() }} </span></h3>
+            <p-divider/>
+
+            @if (showContent()) {
+                <p>
+                    <code>if</code> es una estructura de control que permite ejecutar un bloque de código si una
+                    condición
+                    es verdadera.
+                </p>
+                <p>
+                    <code>if</code> se puede combinar con <code>else</code> para ejecutar un bloque de código si la
+                    condición es falsa.
+                </p>
+                <p>
+                    <code>if</code> se puede combinar con <code>else if</code> para evaluar múltiples condiciones.
+                </p>
+
+            } @else {
+                <p>Haz click para ver mas!</p>
+            }
+
+            <ng-template pTemplate="footer">
+                <p-button
+                        label="Click me!"
+                        severity="help"
+                        styleClass="w-full"
+                        (onClick)="toggleContent()"/>
+            </ng-template>
+
+        </p-card>
+    </div>
+
+    <div class="col-4">
+        <p-card>
+            <h3>switch</h3>
+            <p-divider/>
+
+            <p>
+                <code>switch</code> es una estructura de control que permite evaluar una expresión y ejecutar un
+                bloque de código dependiendo del valor de la expresión.
+            </p>
+
+            <p-divider/>
+
+            <p>Calificación: {{ grade() }}</p>
+
+            @switch (grade()) {
+                @case ('A') {
+                    <p class="text-teal-800">Excelente</p>
+                }
+                @case ('B') {
+                    <p class="text-yellow-400">Notable</p>
+                }
+                @case ('C') {
+                    <p class="text-orange-400">Aprobado</p>
+                }
+                @default {
+                    <p class="text-red-400">💀 Suspenso</p>
+                }
+            }
+
+            <ng-template pTemplate="footer">
+                <div class="flex gap-1">
+
+                    <p-button label="A"
+                              severity="success"
+                              class="w-full"
+                              styleClass="w-full"
+                              (onClick)="grade.set('A')"/>
+
+                    <p-button label="B"
+                              severity="warning"
+                              class="w-full"
+                              styleClass="w-full"
+                              (onClick)="grade.set('B')"/>
+
+                    <p-button label="C"
+                              severity="danger"
+                              class="w-full"
+                              styleClass="w-full"
+                              (onClick)="grade.set('C')"/>
+
+                    <p-button label="F"
+                              severity="contrast"
+                              class="w-full"
+                              styleClass="w-full"
+                              (onClick)="grade.set('F')"/>
+                </div>
+            </ng-template>
+
+        </p-card>
+    </div>
+
+</div>
+
