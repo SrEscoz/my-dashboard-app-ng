@@ -10,7 +10,7 @@ import {CommonModule} from '@angular/common';
 })
 export class DashboardHeaderComponent {
 
-	@Input() title!: string;
-	@Input() icon!: string;
+	@Input({required: true}) title!: string;
+	@Input({required: true}) icon!: string;
 
 }
