@@ -26,39 +26,64 @@ export class SideMenuComponent implements OnInit {
 	ngOnInit(): void {
 		this.items = [
 			{
-				label: 'Detección de cambios',
-				icon: 'pi pi-eye',
-				routerLink: '/dashboard/change-detection'
+				label: 'Detecciones',
+				items: [
+					{
+						label: 'Detección de cambios',
+						icon: 'pi pi-eye',
+						routerLink: '/dashboard/change-detection'
+					},
+				]
 			},
 			{
-				label: 'Control de flujo',
-				icon: 'pi pi-sitemap',
-				routerLink: '/dashboard/control-flow'
+				label: 'Controles',
+				items: [
+					{
+						label: 'Control de flujo',
+						icon: 'pi pi-sitemap',
+						routerLink: '/dashboard/control-flow'
+					},
+				]
 			},
 			{
-				label: 'Opciones deferidas',
-				icon: 'pi pi-clock',
-				routerLink: '/dashboard/defer-options'
+				label: 'Deferidas',
+				items: [
+					{
+						label: 'Opciones deferidas',
+						icon: 'pi pi-clock',
+						routerLink: '/dashboard/defer-options'
+					},
+					{
+						label: 'Vistas deferidas',
+						icon: 'pi pi-eye-slash',
+						routerLink: '/dashboard/defer-views'
+					}
+				]
 			},
 			{
-				label: 'Vistas deferidas',
-				icon: 'pi pi-eye-slash',
-				routerLink: '/dashboard/defer-views'
+				label: 'Usuarios',
+				items: [
+					{
+						label: 'Usuario',
+						icon: 'pi pi-user',
+						routerLink: '/dashboard/user/:id'
+					},
+					{
+						label: 'Listado de usuarios',
+						icon: 'pi pi-users',
+						routerLink: '/dashboard/users-list'
+					}
+				]
 			},
 			{
-				label: 'Usuario',
-				icon: 'pi pi-user',
-				routerLink: '/dashboard/user/:id'
-			},
-			{
-				label: 'Listado de usuarios',
-				icon: 'pi pi-users',
-				routerLink: '/dashboard/users-list'
-			},
-			{
-				label: 'Transición de vistas',
-				icon: 'pi pi-refresh',
-				routerLink: '/dashboard/view-transition'
+				label: 'Transiciones',
+				items: [
+					{
+						label: 'Transición de vistas',
+						icon: 'pi pi-refresh',
+						routerLink: '/dashboard/view-transition'
+					}
+				]
 			}
 		];
 	}
