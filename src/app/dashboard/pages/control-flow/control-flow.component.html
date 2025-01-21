@@ -1,10 +1,13 @@
-<h3>Control de flujos</h3>
+<div class="flex align-items-center gap-3">
+    <i class="pi pi pi-sitemap text-primary" style="font-size: 1.5rem"></i>
+    <h3>Control de flujos</h3>
+</div>
 <p-divider/>
 
 <div class="grid">
 
     <div class="col-4">
-        <p-card>
+        <p-card styleClass="h-full">
             <h3>if: <span class="text-primary-300">{{ showContent() }} </span></h3>
             <p-divider/>
 
@@ -38,7 +41,7 @@
     </div>
 
     <div class="col-4">
-        <p-card>
+        <p-card styleClass="h-full">
             <h3>switch</h3>
             <p-divider/>
 
@@ -94,6 +97,25 @@
                               (onClick)="grade.set('F')"/>
                 </div>
             </ng-template>
+
+        </p-card>
+    </div>
+
+    <div class="col-4">
+        <p-card styleClass="h-full">
+            <h3>for</h3>
+            <p-divider/>
+
+            <p>
+                <code>for</code> es una estructura de control que permite iterar sobre una colección de elementos.
+            </p>
+
+            <p-divider/>
+
+            <code>['Angular', 'React', 'Vue']</code>
+            @for (framekors of frameworks(); track $index) {
+                <p>{{ $index + 1 }}. {{ framekors }}</p>
+            }
 
         </p-card>
     </div>
