@@ -3,6 +3,7 @@ import {CardModule} from 'primeng/card';
 import {DividerModule} from 'primeng/divider';
 import {Button} from 'primeng/button';
 import {PanelModule} from 'primeng/panel';
+import {DashboardHeaderComponent} from '../../../shared/dashboard-header/dashboard-header.component';
 
 type Grade = 'A' | 'B' | 'C' | 'F';
 
@@ -12,7 +13,8 @@ type Grade = 'A' | 'B' | 'C' | 'F';
 		CardModule,
 		DividerModule,
 		Button,
-		PanelModule
+		PanelModule,
+		DashboardHeaderComponent
 	],
 	templateUrl: './control-flow.component.html',
 	styles: ``
@@ -22,7 +24,6 @@ export default class ControlFlowComponent {
 	public showContent = signal(true);
 	public grade = signal<Grade>('A');
 	public frameworks = signal<string[]>(['Angular', 'React', 'Vue']);
-	public emptyList = signal<string[]>([]);
 
 	public toggleContent(): void {
 		this.showContent.update(value => !value);
