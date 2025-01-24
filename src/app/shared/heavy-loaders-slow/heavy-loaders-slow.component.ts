@@ -17,7 +17,7 @@ export class HeavyLoadersSlowComponent {
 	constructor() {
 		const start = Date.now();
 
-		while (Date.now() - start < 1500) {
+		while (Date.now() - start < 500) {
 			// Código bloqueante
 		}
 	}
