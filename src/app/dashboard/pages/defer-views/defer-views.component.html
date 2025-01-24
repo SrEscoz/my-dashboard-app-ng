@@ -1,1 +1,30 @@
-<p>defer-views works!</p>
+<dashboard-header title="Vistas deferidas"
+                  icon="pi-eye-slash"/>
+
+<div class="mt-9">
+
+    @defer () {
+        <heavy-loader-slow cssClass='bg-blue-600 h-10rem mb-2'/>
+    } @placeholder () {
+        <p-skeleton height="5rem" styleClass="mb-2"/>
+    }
+
+    @defer () {
+        <heavy-loader-slow cssClass='bg-red-600 h-10rem mb-2'/>
+    } @placeholder () {
+        <p-skeleton height="5rem" styleClass="mb-2"/>
+    }
+
+    @defer () {
+        <heavy-loader-slow cssClass='bg-purple-600 h-10rem mb-2'/>
+    } @placeholder () {
+        <p-skeleton height="5rem" styleClass="mb-2"/>
+    }
+
+    @defer () {
+        <heavy-loader-slow cssClass='bg-green-600 h-10rem mb-2'/>
+    } @placeholder () {
+        <p-skeleton height="5rem" styleClass="mb-2"/>
+    }
+
+</div>
