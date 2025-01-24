@@ -3,4 +3,13 @@
 
 <div class="mt-9">
 
+    <p-card [header]="currentFramework()">
+        <h4>Propiedad como señal</h4>
+        <code> {{ frameworkAsSignal() | json }}</code>
+
+        <h4>Propiedad estándar </h4>
+        <code> {{ frameworkAsProperty | json }}</code>
+
+    </p-card>
+
 </div>
